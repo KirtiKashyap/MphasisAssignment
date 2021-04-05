@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mphasisassignment.R
 import com.example.mphasisassignment.adapter.AlbumAdapter
 import com.example.mphasisassignment.databinding.FragmentAlbumBinding
 import com.example.mphasisassignment.utils.Resource
@@ -67,6 +70,9 @@ class AlbumFragment : Fragment(), AlbumAdapter.AlbumItemListener {
         })
     }
     override fun onClickedAlbum(id: String) {
-        TODO("Not yet implemented")
+        findNavController().navigate(
+                R.id.action_albumFragment_to_albumDetailFragment,
+                bundleOf("id" to id)
+        )
     }
 }
