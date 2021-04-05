@@ -13,4 +13,5 @@ class AlbumRepository@Inject constructor(
             networkCall = { remoteDataSource.getAlbums() },
             saveCallResult = { localDataSource.insertAll(it) }
         )
-    }
+    fun getAlbumById(id: String) = localDataSource.getAlbum(id)
+}

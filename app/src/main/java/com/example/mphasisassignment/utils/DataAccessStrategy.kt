@@ -22,3 +22,5 @@ fun <T, A> performGetOperation(databaseQuery: () -> LiveData<T>,
             emitSource(source)
         }
     }
+
+

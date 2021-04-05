@@ -14,9 +14,8 @@ interface AlbumDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(albums: List<Album>)
-
-    @Query("SELECT * FROM albums")
-    fun getAlbum(): LiveData<Album>
+    @Query("SELECT * FROM albums WHERE id = :id")
+    fun getAlbum(id: String): LiveData<Album>
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
