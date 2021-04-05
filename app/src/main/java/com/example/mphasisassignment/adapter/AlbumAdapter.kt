@@ -45,6 +45,7 @@ class AlbumViewHolder(private val itemBinding: ItemLayoutBinding,
     fun bind(item: Album) {
         this.album = item
         itemBinding.textViewTitle.text = item.title
+        itemBinding.textViewUserId.text=item.userId
     }
 
     override fun onClick(v: View?) {

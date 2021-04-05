@@ -47,7 +47,8 @@ class DetailFragment : Fragment() {
     }
 
     private fun bindCharacter(album: Album) {
-        binding.title.text = album.title
+        binding.textViewTitle.text = album.title
+        binding.textViewUserId.text=album.userId
     }
 
 }
