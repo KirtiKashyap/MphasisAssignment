@@ -13,3 +13,4 @@ Navigation.
 Future improvement:
 We can add pagination for showing list of data.
 In detail screen we can sync our database with remote by calling an api get data with ID.
+We can add token for authorization and session for security.
